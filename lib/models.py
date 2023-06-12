@@ -1,7 +1,6 @@
 from sqlalchemy import func
 from sqlalchemy import Column, Integer, String, DateTime
-from sqlalchemy.ext.declarative import declarative_base
-
+from sqlalchemy.orm import sessionmaker, declarative_base
 Base = declarative_base()
 
 class Game(Base):
@@ -19,3 +18,4 @@ class Game(Base):
         return f'Game(id={self.id}, ' + \
             f'title="{self.title}", ' + \
             f'platform="{self.platform})"'
+
